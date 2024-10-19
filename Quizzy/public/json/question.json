@@ -1,0 +1,22 @@
+[
+    "General": [
+        {
+            "question": "A flashing red traffic light signifies that a driver should do what?",
+            "respons"{
+                "A": "stop",
+                "B": "speed up",
+                "C": "proceed with caution",
+                "D": "honk the horn"
+            },
+            "answer": "A"
+        },
+        {
+            "question": "A knish is traditionally stuffed with what filling?",
+            "A": "potato",
+            "B": "creamed corn",
+            "C": "lemon custard",
+            "D": "raspberry jelly",
+            "answer": "A"
+        }
+    ]
+]
