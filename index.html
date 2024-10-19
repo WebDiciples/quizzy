@@ -1,0 +1,213 @@
+<!-- 
+	Made with full love by webdiciple
+	Follow webdicple on facebook,youtube,x 
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="A quizz game made with full web technologie like html css javascript without library" />
+		<meta author="webdicple" />
+		<!-- link css -->
+		<link rel="stylesheet" href="./public/css/app.css" />
+		<!-- script js -->
+		<script type="module" src="./public/script/app.js" defer></script>
+		<title>Quizzy</title>
+	</head>
+
+	<body class="flex jcc">
+		<main id="app_root">
+			<!-- ======Home screen====== -->
+			<div class="home_screen flex jcc active_screen">
+				<div class="shape"></div>
+				<div class="shape"></div>
+				<div class="shape"></div>
+				<span class="menu_btn">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="16"
+						height="16"
+						fill="currentColor"
+						class="bi bi-justify-left"
+						viewBox="0 0 16 16">
+						<path
+							fill-rule="evenodd"
+							d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+					</svg>
+				</span>
+				<div class="nav_cont">
+					<nav>
+						<span class="close_nav">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-x"
+								viewBox="0 0 16 16">
+								<path
+									d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+							</svg>
+						</span>
+						<h2 class="game_title">Quizzy</h2>
+
+						<h2>Settings</h2>
+
+						<p style="font-weight: 500">Change Font Size</p>
+						<span class="font_size_prev">
+							<input
+								type="range"
+								id="font_size_value"
+								min="0.8"
+								max="1.1"
+								step="0.01" />
+						</span>
+						<hr />
+						<h2>Themes</h2>
+						<div id="themes" class="resp_grid">
+							<span class="theme_cont check">
+								<span class="theme_indic def_indic"></span>
+								ocean blue
+								<input type="hidden" value="" />
+							</span>
+							<span class="theme_cont theme_1">
+								<span class="theme_indic"></span>
+								sanguine
+								<input type="hidden" value="theme_1" />
+							</span>
+							<span class="theme_cont theme_2">
+								<span class="theme_indic"></span>
+								quepal
+								<input type="hidden" value="theme_2" />
+							</span>
+							<span class="theme_cont theme_3">
+								<span class="theme_indic"></span>
+								purple lake
+								<input type="hidden" value="theme_3" />
+							</span>
+							<span class="theme_cont theme_4">
+								<span class="theme_indic"></span>
+								bloody mary
+								<input type="hidden" value="theme_4" />
+							</span>
+							<span class="theme_cont theme_5">
+								<span class="theme_indic"></span>
+								liscious lime
+								<input type="hidden" value="theme_5" />
+							</span>
+						</div>
+						<hr />
+						<span class="song flex jcc">
+							<button type="button" id="env_song">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-music-note"
+									viewBox="0 0 16 16">
+									<path
+										d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+									<path fill-rule="evenodd" d="M9 3v10H8V3h1z" />
+									<path
+										d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5V2.82z" />
+								</svg>
+							</button>
+							<button type="button" id="click_song">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-volume-up"
+									viewBox="0 0 16 16">
+									<path
+										d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+									<path
+										d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
+									<path
+										d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z" />
+								</svg>
+							</button>
+							<button type="button" id="share">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-share"
+									viewBox="0 0 16 16">
+									<path
+										d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+								</svg>
+							</button>
+						</span>
+						<hr />
+						<p style="text-align: center">
+							Made with <b style="color: var(--pr-color)"> &hearts; </b> by
+							Webdiciple(s)
+						</p>
+					</nav>
+				</div>
+				<h1 class="game_title">Quizzy</h1>
+				<select id="category_game"></select>
+				<div class="play_btn_cont">
+					<p
+						class="how_to_play"
+						title="Select a subject in list and start playing. Enjoy!">
+						How to play?
+					</p>
+					<button type="button" id="start_game">Strat playing</button>
+				</div>
+			</div>
+			<!-- ======Play screen====== -->
+			<div class="play_screen">
+				<section class="head_ques flex">
+					<header class="flex jcc">
+						<span class="current_score flex">
+							<p></p>
+							<b>/200</b>
+						</span>
+					</header>
+
+					<div class="question_card_cont">
+						<span class="nbr_ques">
+							<span class="remain_ques"></span>
+							<b>/10</b>
+						</span>
+						<div class="question_card flex jcc">
+							<p class="ques_text"></p>
+							<div class="ques_time"></div>
+						</div>
+						<div class="under_layer ul_1"></div>
+						<div class="under_layer ul_2"></div>
+						<div class="under_layer fake_layer"></div>
+					</div>
+				</section>
+				<div class="respons_cont">
+					<p>Select the correct answer</p>
+					<div class="responses"></div>
+				</div>
+			</div>
+			<!-- ======Result screen====== -->
+			<div class="result_screen flex jcc">
+				<div class="shape"></div>
+				<div class="shape"></div>
+				<div class="shape"></div>
+				<h2 class="game_title">Quizzy</h2>
+
+				<div class="your_score">
+					<h2>Your_score : <span></span></h2>
+					<br />
+				</div>
+
+				<div class="play_btn_cont">
+					<button type="button" id="play_again">Play again</button>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
